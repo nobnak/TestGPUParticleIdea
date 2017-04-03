@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BasicGPUParticle;
 
 [ExecuteInEditMode]
 public class Test : MonoBehaviour {
@@ -18,9 +19,9 @@ public class Test : MonoBehaviour {
 
 		for (var i = count - positions.Length; i > 0; i--)
 			particles.Pop ();
-		for (var i = 0; i < count && i < positions.Length; i++)
-			particles [i] = new GPUParticleRenderer.Particle (positions [i].position, size);
-		for (var i = count; i < positions.Length; i++)
-			particles.Push (new GPUParticleRenderer.Particle (positions [i].position, size));
+        for (var i = 0; i < count && i < positions.Length; i++)
+            particles [i] = (GPUParticle) positions [i];
+        for (var i = count; i < positions.Length; i++)
+            particles.Push ((GPUParticle)positions [i]);
 	}
 }
