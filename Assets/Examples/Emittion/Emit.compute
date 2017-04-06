@@ -1,0 +1,17 @@
+﻿#pragma kernel CSMain
+
+#include "Assets/Packages/GPUParticleIdea/GPUParticle.cginc"
+
+StructuredBuffer<Particle> emits;
+ConsumeStructuredBuffer<uint> deads;
+
+RWStructuredBuffer<uint> flags;
+RWStructuredBuffer<Particle> particles;
+
+[numthreads(1,1,1)]
+void CSMain(uint3 did : SV_DispatchThreadID) {
+	uint i = deads.Consume();
+
+	flags[i] = 1;
+	particles[i] = emits[did.x];
+}
