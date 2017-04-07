@@ -44,6 +44,7 @@ public class EmissionTest : MonoBehaviour {
 		emitBuffer.Release ();
 		flagBuffer.Dispose ();
 		particleBuffer.Release ();
+		deadBuffer.Dispose ();
 	}
 
 	static string ToString<T>(IEnumerable<T> data, string label, string valueFormat) {
