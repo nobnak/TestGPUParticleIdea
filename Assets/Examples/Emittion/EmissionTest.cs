@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Runtime.InteropServices;
 using BasicGPUParticle;
 using System.Text;
+using Gist;
 
 public class EmissionTest : MonoBehaviour {
 	public const string PROP_EMIT_LIST = "emits";

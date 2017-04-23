@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
 using BasicGPUParticle;
+using Gist;
 
 public class DeadArray : GPUArray<uint> {
 
