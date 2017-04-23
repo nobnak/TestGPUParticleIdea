@@ -1,3 +1,6 @@
 [submodule "Assets/Packages/GPUParticleIdea"]
 	path = Assets/Packages/GPUParticleIdea
 	url = git@github.com:nobnak/GPUParticleIdea.git
+[submodule "Assets/Packages/Gist"]
+	path = Assets/Packages/Gist
+	url = https://github.com/nobnak/Gist.git
